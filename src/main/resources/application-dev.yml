@@ -1,0 +1,20 @@
+server:
+  port: 8080
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/developer?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+#mybatis:
+mybatis:
+  config-locations: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.hgx.invoicing.model
+#logback
+logging:
+    config: classpath:logback/logback-spring.xml
+#swagger
+swagger:
+  enabled: true
